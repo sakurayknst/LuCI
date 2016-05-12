@@ -50,6 +50,8 @@
 		local rv = {
 			uptime     = sysinfo.uptime or 0,
 			localtime  = os.date(),
+			cpuusage   = luci.sys.exec("echo $( echo $(cat /proc/stat | grep \"^cpu \" | awk '{print $1+$2+$3+$4+$5+$6+$7 \" \" $1+$2+$3+$6+$7}') $(sleep 1 && cat /proc/stat | grep \"^cpu \" | awk '{print $1+$2+$3+$4+$5+$6+$7 \" \" $1+$2+$3+$6+$7}') | awk '{print (($4-$2)/($3-$1))*100}' )"),
+			soc_temp   = luci.sys.exec("echo 'CPU:'$(cut -c1-2 /sys/class/hwmon/hwmon2/temp1_input)'℃ | Memory:'$(cut -c1-2 /sys/class/hwmon/hwmon1/temp1_input)'℃ | WiFi:'$(cut -c1-2 /sys/class/hwmon/hwmon1/temp2_input)'℃'"),
 			loadavg    = sysinfo.load or { 0, 0, 0 },
 			memory     = meminfo,
 			swap       = swapinfo,
@@ -88,15 +90,19 @@
 		if has_dsl then
 			local dsl_stat = luci.sys.exec("/etc/init.d/dsl_control lucistat")
 			local dsl_func = loadstring(dsl_stat)
-			if dsl_func then
-				rv.dsl = dsl_func()
-			end
+			rv.dsl = dsl_func()
 		end
 
 		luci.http.prepare_content("application/json")
 		luci.http.write_json(rv)
 
 		return
+	end
+
+	local soc_model = luci.sys.exec("cat /proc/cpuinfo | grep 'Hardware' | cut -d : -f 2-");
+
+	if string.sub(soc_model, 1, 1) == " " then
+		soc_model = string.sub(soc_model, 2, -1);
 	end
 -%>
 
@@ -245,7 +251,7 @@
 				dsl_s.innerHTML = String.format('<small>%s</small>', s);
 				dsl_i.innerHTML = String.format(
 					'<img src="<%=resource%>/icons/ethernet.png" />' +
-					'<br /><small>xDSL</small>'
+					'<br /><small>ADSL</small>'
 				);
 			<% end %>
 
@@ -515,6 +521,12 @@
 					info.loadavg[2] / 65535.0
 				);
 
+			if (e = document.getElementById('cpuusage'))
+				e.innerHTML = String.format('%.02f\%',info.cpuusage);
+
+			if (e = document.getElementById('soc_temp'))
+				e.innerHTML = info.soc_temp;
+
 			if (e = document.getElementById('memtotal'))
 				e.innerHTML = progressbar(
 					((info.memory.free + info.memory.buffered) / 1024) + " <%:kB%>",
@@ -564,10 +576,13 @@
 			<%=pcdata(ver.distname)%> <%=pcdata(ver.distversion)%> /
 			<%=pcdata(ver.luciname)%> (<%=pcdata(ver.luciversion)%>)
 		</td></tr>
+		<tr><td width="33%"><%:Chip Model%></td><td><%=soc_model%></td></tr>
 		<tr><td width="33%"><%:Kernel Version%></td><td><%=unameinfo.release or "?"%></td></tr>
 		<tr><td width="33%"><%:Local Time%></td><td id="localtime">-</td></tr>
 		<tr><td width="33%"><%:Uptime%></td><td id="uptime">-</td></tr>
 		<tr><td width="33%"><%:Load Average%></td><td id="loadavg">-</td></tr>
+		<tr><td width="33%"><%:CPU usage%></td><td id="cpuusage">-</td></tr>
+		<tr><td width="33%"><%:Temperature %></td><td id="soc_temp">-</td></tr>
 	</table>
 </fieldset>
 
@@ -650,9 +665,9 @@
 
 <% if has_dsl then %>
 <fieldset class="cbi-section">
-       <legend><%:xDSL%></legend>
+       <legend><%:ADSL%></legend>
        <table width="100%" cellspacing="10">
-               <tr><td width="33%" style="vertical-align:top"><%:xDSL Status%></td><td>
+               <tr><td width="33%" style="vertical-align:top"><%:ADSL Status%></td><td>
                        <table><tr>
                                <td id="dsl_i" style="width:16px; text-align:center; padding:3px"><img src="<%=resource%>/icons/ethernet_disabled.png" /><br /><small>?</small></td>
                                <td id="dsl_s" style="vertical-align:middle; padding: 3px"><em><%:Collecting data...%></em></td>

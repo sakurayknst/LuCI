@@ -61,6 +61,9 @@ msgid ""
 "UPnP-AV clients."
 msgstr "MiniDLNA是目标为完全兼容DLNA / UPnP-AV客户端的服务器软件。"
 
+msgid "miniDLNA Settings"
+msgstr "miniDLNA设定"
+
 msgid ""
 "Model number the miniDLNA daemon will report to clients in its XML "
 "description."
@@ -82,7 +85,7 @@ msgid "Pictures"
 msgstr "图片"
 
 msgid "Port for HTTP (descriptions, SOAP, media transfer) traffic."
-msgstr "Port for HTTP (descriptions, SOAP, media transfer) traffic."
+msgstr "用于查看miniDLNA运行状态的HTTP端口"
 
 msgid "Port:"
 msgstr "端口："

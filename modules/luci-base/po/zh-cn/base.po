@@ -415,6 +415,9 @@ msgstr "CA证书.如果留空的话证书将在第一次连接时被保存."
 msgid "CPU"
 msgstr "CPU"
 
+msgid "CPU usage"
+msgstr "CPU使用率"
+
 msgid "CPU usage (%)"
 msgstr "CPU使用率(%)"
 
@@ -2425,6 +2428,9 @@ msgstr "系统日志缓冲区大小"
 
 msgid "TCP:"
 msgstr "TCP:"
+
+msgid "Temperature"
+msgstr "温度"
 
 msgid "TFTP Settings"
 msgstr "TFTP设置"

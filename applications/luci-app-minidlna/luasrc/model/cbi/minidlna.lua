@@ -8,7 +8,7 @@ m = Map("minidlna", translate("miniDLNA"),
 
 m:section(SimpleSection).template  = "minidlna_status"
 
-s = m:section(TypedSection, "minidlna", "miniDLNA Settings")
+s = m:section(TypedSection, "minidlna", translate("miniDLNA Settings"))
 s.addremove = false
 s.anonymous = true
 
@@ -72,7 +72,7 @@ end
 o = s:taboption("general", Value, "friendly_name", translate("Friendly name:"),
 	translate("Set this if you want to customize the name that shows up on your clients."))
 o.rmempty = true
-o.placeholder = "OpenWrt DLNA Server"
+o.placeholder = "Sakura-Home DLNA Server"
 
 o = s:taboption("advanced", Value, "db_dir", translate("Database directory:"),
 	translate("Set this if you would like to specify the directory where you want MiniDLNA to store its database and album art cache."))
@@ -97,7 +97,7 @@ o.rmempty = true
 
 o = s:taboption("advanced", Value, "presentation_url", translate("Presentation URL:"))
 o.rmempty = true
-o.placeholder = "http://192.168.1.1/"
+o.placeholder = "http://Sakura-Home/"
 
 o = s:taboption("advanced", Value, "notify_interval", translate("Notify interval:"),
 	translate("Notify interval in seconds."))
@@ -106,11 +106,11 @@ o.placeholder = 900
 
 o = s:taboption("advanced", Value, "serial", translate("Announced serial number:"),
 	translate("Serial number the miniDLNA daemon will report to clients in its XML description."))
-o.placeholder = "12345678"
+o.placeholder = "V1"
 
 s:taboption("advanced", Value, "model_number", translate("Announced model number:"),
 	translate("Model number the miniDLNA daemon will report to clients in its XML description."))
-o.placholder = "1"
+o.placholder = "linksys WRT1900AC"
 
 o = s:taboption("advanced", Value, "minissdpsocket", translate("miniSSDP socket:"),
 	translate("Specify the path to the MiniSSDPd socket."))

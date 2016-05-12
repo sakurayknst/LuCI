@@ -1,6 +1,17 @@
--- Copyright 2008 Steven Barth <steven@midlink.org>
--- Copyright 2008 Jo-Philipp Wich <jow@openwrt.org>
--- Licensed to the public under the Apache License 2.0.
+--[[
+LuCI - Lua Configuration Interface
+
+Copyright 2008 Steven Barth <steven@midlink.org>
+Copyright 2008 Jo-Philipp Wich <xm@leipzig.freifunk.net>
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+	http://www.apache.org/licenses/LICENSE-2.0
+
+$Id: samba.lua 6984 2011-04-13 15:14:42Z soma $
+]]--
 
 m = Map("samba", translate("Network Shares"))
 
@@ -10,12 +21,16 @@ s.anonymous = true
 s:tab("general",  translate("General Settings"))
 s:tab("template", translate("Edit Template"))
 
+s:taboption("general", Flag, "enabled", translate("Enable"))
 s:taboption("general", Value, "name", translate("Hostname"))
 s:taboption("general", Value, "description", translate("Description"))
 s:taboption("general", Value, "workgroup", translate("Workgroup"))
-s:taboption("general", Value, "homes", translate("Share home-directories"),
-        translate("Allow system users to reach their home directories via " ..
-                "network shares"))
+s:taboption("general", Flag, "uenabled", translate("uenable"), translate("uenabled"))
+u = s:taboption("general", Value, "user", translate("user"))
+u:depends("uenabled", "1")
+p = s:taboption("general", Value, "password", translate("password"))
+p:depends("uenabled", "1")
+p.password = true
 
 tmpl = s:taboption("template", Value, "_tmpl",
 	translate("Edit the template that is used for generating the samba configuration."), 
@@ -38,15 +53,18 @@ end
 s = m:section(TypedSection, "sambashare", translate("Shared Directories"))
 s.anonymous = true
 s.addremove = true
-s.template = "cbi/tblsection"
 
 s:option(Value, "name", translate("Name"))
 pth = s:option(Value, "path", translate("Path"))
-if nixio.fs.access("/etc/config/fstab") then
-        pth.titleref = luci.dispatcher.build_url("admin", "system", "fstab")
-end
+pth.rmempty = false
+local pth_suggestions = nixio.fs.glob("/mnt/sd*")
 
-s:option(Value, "users", translate("Allowed users")).rmempty = true
+if pth_suggestions then
+	local node
+	for node in pth_suggestions do
+		pth:value(node)
+	end
+end
 
 ro = s:option(Flag, "read_only", translate("Read-only"))
 ro.rmempty = false
@@ -58,15 +76,5 @@ go.rmempty = false
 go.enabled = "yes"
 go.disabled = "no"
 
-cm = s:option(Value, "create_mask", translate("Create mask"),
-        translate("Mask for new files"))
-cm.rmempty = true
-cm.size = 4
-
-dm = s:option(Value, "dir_mask", translate("Directory mask"),
-        translate("Mask for new directories"))
-dm.rmempty = true
-dm.size = 4
-
-
 return m
+

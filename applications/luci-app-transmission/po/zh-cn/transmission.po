@@ -1,295 +1,327 @@
 msgid ""
-msgstr ""
-"Project-Id-Version: PACKAGE VERSION\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-10-08 14:06+0200\n"
-"PO-Revision-Date: 2014-06-15 04:57+0200\n"
-"Last-Translator: phantasm131 <phantasm131@gmail.com>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"Language: zh_CN\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Pootle 2.0.6\n"
+msgstr "Translator: Rui Shen <shenrui01@gmail.com>"
 
-msgid "Alternative download speed"
-msgstr "临时下载限速"
-
-msgid "Alternative speed enabled"
-msgstr "启用临时限速"
-
-msgid "Alternative speed time begin"
-msgstr "计划限速始于"
-
-msgid "Alternative speed time day"
-msgstr "计划限速日期"
-
-msgid "Alternative speed time end"
-msgstr "计划限速止于"
-
-msgid "Alternative speed timing enabled"
-msgstr "启用计划限速"
-
-msgid "Alternative upload speed"
-msgstr "临时上传速度"
-
-msgid "Automatically start added torrents"
-msgstr "种子自动下载"
-
-msgid "Bandwidth settings"
-msgstr "带宽配置"
-
-msgid "Binding address IPv4"
-msgstr "绑定IPv4地址"
-
-msgid "Binding address IPv6"
-msgstr "绑定IPv6地址"
-
-msgid "Block list enabled"
-msgstr "启用阻止列表"
-
-msgid "Blocklist URL"
-msgstr "URL阻止清单"
-
-msgid "Blocklists"
-msgstr "阻止清单"
-
-msgid "Cache size in MB"
-msgstr "缓存大小（MB）"
-
-msgid "Config file directory"
-msgstr "配置文件的目录"
-
-msgid "DHT enabled"
-msgstr "启用DHT"
-
-msgid "Debug"
-msgstr "调试"
-
-msgid "Download directory"
-msgstr "下载目录"
-
-msgid "Download queue enabled"
-msgstr "启用下载队列"
-
-msgid "Download queue size"
-msgstr "下载队列大小"
-
-msgid "Enable watch directory"
-msgstr "启用种子轮询目录"
-
-msgid "Enabled"
-msgstr "启用"
-
-msgid "Encryption"
-msgstr "加密"
-
-msgid "Error"
-msgstr "错误"
-
-msgid "Fast"
-msgstr "快速"
-
-msgid "Files and Locations"
-msgstr "文件和位置"
-
-msgid "Forced"
-msgstr "强制"
-
-msgid "Full"
-msgstr "全分配"
-
-msgid "Global peer limit"
-msgstr "全局Peer限制"
-
-msgid "Global settings"
-msgstr "全局设置"
-
-msgid "Idle seeding limit"
-msgstr "空闲做种限时"
-
-msgid "Idle seeding limit enabled"
-msgstr "启用空闲做种时间"
-
-msgid "Incomplete directory"
-msgstr "未完成目录"
-
-msgid "Incomplete directory enabled"
-msgstr "启用未完成目录"
-
-msgid "Info"
-msgstr "信息"
-
-msgid "LPD enabled"
-msgstr "启用LPD"
-
-msgid "Lazy bitfield enabled"
-msgstr "启用位段延迟"
-
-msgid "Message level"
-msgstr "消息级别"
-
-msgid "Miscellaneous"
-msgstr "其他参数"
-
-msgid "None"
-msgstr "空"
-
-msgid ""
-"Number/bitfield. Start with 0, then for each day you want the scheduler "
-"enabled, add a value. For Sunday - 1, Monday - 2, Tuesday - 4, Wednesday - "
-"8, Thursday - 16, Friday - 32, Saturday - 64"
-msgstr "生效日期是对应日期的算术加和值。对应关系：周日-1、周一-2、周二-4、周三-8、周四-16、周五-32、周六-64。"
-
-msgid "Off"
-msgstr "关闭"
+msgid "Transmission daemon is a simple bittorrent client, here you can configure the settings."
+msgstr "Transmission是一个快速易用的BitTorrent客户端，在这里你可以配置设置"
 
 msgid "Open Web Interface"
-msgstr "Web管理界面"
+msgstr "打开web客户端"
 
-msgid "PEX enabled"
-msgstr "启用PEX"
+msgid "Settings"
+msgstr "设置"
 
-msgid "Peer Port settings"
-msgstr "Peer端口设置"
+msgid "Basic Settings"
+msgstr "基本设置"
 
-msgid "Peer congestion algorithm"
-msgstr "Peer拥塞算法"
+msgid "Location"
+msgstr "目录"
 
-msgid "Peer limit per torrent"
-msgstr "每个种子Peer限制数"
+msgid "Limit Speed"
+msgstr "限速"
 
-msgid "Peer port"
-msgstr "Peer端口"
+msgid "Peer Settings"
+msgstr "节点"
 
-msgid "Peer port random high"
-msgstr "Peer随机端口最大值"
-
-msgid "Peer port random low"
-msgstr "Peer随机端口最小值"
-
-msgid "Peer port random on start"
-msgstr "Peer端口随机"
-
-msgid "Peer settings"
-msgstr "Peer设置"
-
-msgid "Peer socket tos"
-msgstr "Peer套接字tos值"
-
-msgid "Port forwarding enabled"
-msgstr "启用端口转发"
-
-msgid "Preferred"
-msgstr "优先"
-
-msgid "Prefetch enabled"
-msgstr "启用预取缓存"
-
-msgid "Queue stalled enabled"
-msgstr "启用队列暂停"
-
-msgid "Queue stalled minutes"
-msgstr "队列暂停分钟"
+msgid "Network"
+msgstr "网络"
 
 msgid "Queueing"
 msgstr "队列"
 
-msgid "RPC URL"
-msgstr "RPC URL"
+msgid "View The Log"
+msgstr "查看日志"
 
-msgid "RPC authentication required"
-msgstr "PRC授权验证"
+msgid "Enabled"
+msgstr "启用"
 
-msgid "RPC bind address"
-msgstr "RPC绑定地址"
+msgid "Config file directory"
+msgstr "配置文件目录"
+
+msgid "Run daemon as user"
+msgstr "以该用户运行"
+
+msgid "Cache size in MB"
+msgstr "磁盘缓存（MB）"
+
+msgid "Message level"
+msgstr "日志等级"
+
+msgid "Close"
+msgstr "关闭"
+
+msgid "Error"
+msgstr "错误"
+
+msgid "Info"
+msgstr "信息"
+
+msgid "Debug"
+msgstr "调试"
 
 msgid "RPC enabled"
-msgstr "启用PRC"
-
-msgid "RPC password"
-msgstr "RPC密码"
+msgstr "启用RPC"
 
 msgid "RPC port"
 msgstr "RPC端口"
 
-msgid "RPC settings"
-msgstr "RPC配置"
+msgid "RPC bind address"
+msgstr "RPC绑定IP"
 
-msgid "RPC username"
-msgstr "RPC用户名"
-
-msgid "RPC whitelist"
-msgstr "RPC白名单"
+msgid "RPC URL"
+msgstr "RPC目录"
 
 msgid "RPC whitelist enabled"
 msgstr "启用RPC白名单"
 
-msgid "Ratio limit"
-msgstr "分享率限值"
+msgid "RPC whitelist"
+msgstr "RPC白名单"
 
-msgid "Ratio limit enabled"
-msgstr "启用分享率限制"
+msgid "RPC authentication required"
+msgstr "启用RPC身份验证"
 
-msgid "Rename partial files"
-msgstr "重命名未完成文件"
+msgid "RPC username"
+msgstr "RPC用户名"
 
-msgid "Run daemon as user"
-msgstr "用户组"
-
-msgid "Scheduling"
-msgstr "计划任务"
-
-msgid "Scrape paused torrents enabled"
-msgstr "忽略暂停的种子"
+msgid "RPC password"
+msgstr "RPC密码"
 
 msgid "Script torrent done enabled"
-msgstr "种子完成时运行脚本"
+msgstr "下载完成后运行脚本"
 
 msgid "Script torrent done filename"
-msgstr "脚本文件名"
+msgstr "脚本名称"
 
-msgid "Seed queue enabled"
-msgstr "启用做种队列"
+msgid "Download directory"
+msgstr "下载目录"
 
-msgid "Seed queue size"
-msgstr "做种队列大小"
+msgid "Incomplete directory enabled"
+msgstr "启用临时下载目录"
+
+msgid "Incomplete directory"
+msgstr "临时下载目录"
+
+msgid "preallocation"
+msgstr "磁盘预分配"
+
+msgid "Full - slower but reduces disk fragmentation"
+msgstr "0=关闭，1=快速，2=完全,建议取1开启该功能，防止下载大半了才发现磁盘不够。取2时，可以减少磁盘碎片，但速度较慢"
+
+msgid "Fast"
+msgstr "快速"
+
+msgid "Full"
+msgstr "完全"
+
+msgid "Append &quot;.part&quot; to incomplete files' names"
+msgstr "在未完成的文件名后面加上 &quot;.part&quot;"
+
+msgid "Prefetch enabled"
+msgstr "启用预读取"
+
+msgid "Rename partial files"
+msgstr "未完成文件加后缀"
+
+msgid "Automatically start added torrents"
+msgstr "添加种子后立即开始"
+
+msgid "umask"
+msgstr "新建文件权限掩码"
+
+msgid "Enable watch directory"
+msgstr "启用种子目录监控"
+
+msgid "Watch directory"
+msgstr "种子目录"
+
+msgid "Trash original torrent files"
+msgstr "删除源种子文件"
+
+msgid "Delete torrents added from the watch directory."
+msgstr "从监控目录删除源种子"
+
+msgid "Speed limit down enabled"
+msgstr "启用常规下载限速"
 
 msgid "Speed limit down"
 msgstr "下载限速"
 
-msgid "Speed limit down enabled"
-msgstr "启用下载限速"
+msgid "Speed limit up enabled"
+msgstr "启用常规上传限速"
 
 msgid "Speed limit up"
 msgstr "上传限速"
 
-msgid "Speed limit up enabled"
-msgstr "启用上传限速"
-
-msgid "Transmission"
-msgstr "Transmission"
-
-msgid ""
-"Transmission daemon is a simple bittorrent client, here you can configure "
-"the settings."
-msgstr "Transmission是个简单易用的BT/PT客户端。"
-
-msgid "Trash original torrent files"
-msgstr "删除种子源文件"
-
 msgid "Upload slots per torrent"
-msgstr "每个种子上传连接数"
+msgstr "每个种子上传通道数"
 
-msgid "Watch directory"
-msgstr "轮询种子目录"
+msgid "Alternative speed enabled"
+msgstr "启用临时限速"
 
-msgid "in minutes from midnight"
-msgstr "从晚上00:00起的分钟数，限速到临时速度"
+msgid "Override normal speed limits manually or at scheduled times"
+msgstr "覆盖常规限速或计划限速"
 
-msgid "preallocation"
-msgstr "磁盘预分配策略"
+msgid "Alternative download speed"
+msgstr "临时下载限速"
+
+msgid "Alternative upload speed"
+msgstr "临时上传限速"
+
+msgid "Alternative speed timing enabled"
+msgstr "计划限速"
+
+msgid "Alternative speed time day"
+msgstr "重复"
+
+msgid "Every day"
+msgstr "每天"
+
+msgid "Working days"
+msgstr "工作日"
+
+msgid "Weekend"
+msgstr "周末"
+
+msgid "Sunday"
+msgstr "星期日"
+
+msgid "Monday"
+msgstr "星期一"
+
+msgid "Tuesday"
+msgstr "星期二"
+
+msgid "Wednesday"
+msgstr "星期三"
+
+msgid "Thursday"
+msgstr "星期四"
+
+msgid "Friday"
+msgstr "星期五"
+
+msgid "Saturday"
+msgstr "星期六"
+
+
+msgid "Alternative speed time begin"
+msgstr "起始时间"
+
+msgid "540, in minutes from midnight, 9am"
+msgstr "分钟，比如540表示上午9点，9x60=540"
+
+msgid "Alternative speed time end"
+msgstr "结束时间"
+
+msgid "Binding address IPv4"
+msgstr "绑定IPV4"
+
+msgid "Binding address IPv6"
+msgstr "绑定IPV6"
+
+msgid "Peer congestion algorithm"
+msgstr "节点TCP拥塞算法"
+
+msgid "Global peer limit"
+msgstr "全局最大连接节点数"
+
+msgid "Peer limit per torrent"
+msgstr "每个种子的最大节点数"
+
+msgid "Peer socket tos"
+msgstr "节点socket tos"
+
+msgid "Block list enabled"
+msgstr "启用黑名单"
+
+msgid "Blocklist URL"
+msgstr "黑名单URL"
+
+msgid "Peer port"
+msgstr "节点端口"
+
+msgid "Peer port random on start"
+msgstr "启动时随机选择端口（不推荐）"
+
+msgid "Peer port random high"
+msgstr "最大随机端口"
+
+msgid "Peer port random low"
+msgstr "最小随机端口"
+
+msgid "Port forwarding enabled"
+msgstr "启用端口自动转发（UPnP）"
+
+msgid "Encryption"
+msgstr "加密模式"
+
+msgid "encryption off"
+msgstr "不加密"
+
+msgid "Preferred"
+msgstr "优先加密"
+
+msgid "Forced"
+msgstr "强制加密"
+
+msgid "Lazy bitfield enabled"
+msgstr "启用Lazy bitfield"
+
+msgid "DHT enabled"
+msgstr "启用DHT"
+
+msgid "DHT is a tool for finding peers without a tracker."
+msgstr "DHT是不通过Tracker寻找节点的工具"
+
+msgid "LPD enabled"
+msgstr "启用LPD"
+
+msgid "LPD is a tool for finding peers on your local network."
+msgstr "LDP是用于在本地网络寻找节点的工具"
+
+msgid "PEX enabled"
+msgstr "启用PEX"
+
+msgid "PEX is a tool for exchanging peer lists with the peers you're connected to."
+msgstr "PEX是用于同已与您相连接的节点交换节点名单的工具。"
 
 msgid "uTP enabled"
-msgstr "启用uTP"
+msgstr "启用µTP"
+
+msgid "uTP is a tool for reducing network congestion."
+msgstr "µTP用于减少网络拥塞。"
+
+msgid "Idle seeding limit enabled"
+msgstr "启用空闲做种时间限制"
+
+msgid "Idle seeding limit"
+msgstr "空闲做种时间"
+
+msgid "Ratio limit enabled"
+msgstr "启用做种分享率限制"
+
+msgid "Ratio limit"
+msgstr "分享率限制"
+
+msgid "Download queue enabled"
+msgstr "启用下载队列功能"
+
+msgid "Download queue size"
+msgstr "队列上限"
+
+msgid "Queue stalled enabled"
+msgstr "启用失速调整"
+
+msgid "When true, torrents that have not shared data for queue-stalled-minutes are treated as 'stalled' and are not counted against the queue-download-size and seed-queue-size limits"
+msgstr "调整周期内若有种子无数据传送则送进排队中"
+
+msgid "Queue stalled minutes"
+msgstr "调整周期"
+
+msgid "Seed queue enabled"
+msgstr "启用做种队列功能"
+
+msgid "Seed queue size"
+msgstr "队列上限"
+
+msgid "Scrape paused torrents enabled"
+msgstr "更新暂停的种子"

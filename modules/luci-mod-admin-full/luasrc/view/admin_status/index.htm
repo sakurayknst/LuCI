@@ -51,7 +51,6 @@
 			uptime     = sysinfo.uptime or 0,
 			localtime  = os.date(),
 			cpuusage   = luci.sys.exec("echo $( echo $(cat /proc/stat | grep \"^cpu \" | awk '{print $1+$2+$3+$4+$5+$6+$7 \" \" $1+$2+$3+$6+$7}') $(sleep 1 && cat /proc/stat | grep \"^cpu \" | awk '{print $1+$2+$3+$4+$5+$6+$7 \" \" $1+$2+$3+$6+$7}') | awk '{print (($4-$2)/($3-$1))*100}' )"),
-			soc_temp   = luci.sys.exec("echo 'CPU:'$(cut -c1-2 /sys/class/hwmon/hwmon2/temp1_input)'℃ | Memory:'$(cut -c1-2 /sys/class/hwmon/hwmon1/temp1_input)'℃ | WiFi:'$(cut -c1-2 /sys/class/hwmon/hwmon1/temp2_input)'℃'"),
 			loadavg    = sysinfo.load or { 0, 0, 0 },
 			memory     = meminfo,
 			swap       = swapinfo,
@@ -582,7 +581,6 @@
 		<tr><td width="33%"><%:Uptime%></td><td id="uptime">-</td></tr>
 		<tr><td width="33%"><%:Load Average%></td><td id="loadavg">-</td></tr>
 		<tr><td width="33%"><%:CPU usage%></td><td id="cpuusage">-</td></tr>
-		<tr><td width="33%"><%:Temperature %></td><td id="soc_temp">-</td></tr>
 	</table>
 </fieldset>
 
